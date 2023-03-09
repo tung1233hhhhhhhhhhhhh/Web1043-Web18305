@@ -10,5 +10,3 @@ let b1 = parseInt(b);
 let c = a1 + b1;
 //in ra
 document.write(c);
-//In ra bảng console
-console.log(c);
