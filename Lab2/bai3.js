@@ -11,7 +11,6 @@ document.write("<br>");
 document.write("Giới tính: " + gioiTinh.toLocaleUpperCase());
 if (gioiTinh.toLocaleLowerCase() === "nam") {
   document.write("<br>");
-
   fullName_list[1] = "Văn";
   var newfull = fullName_list.join(" ");
 } else if (
@@ -19,7 +18,6 @@ if (gioiTinh.toLocaleLowerCase() === "nam") {
   gioiTinh.toLocaleLowerCase() === "nu"
 ) {
   document.write("<br>");
-
   fullName_list[1] = "Vẽ";
   var newfull = fullName_list.join(" ");
 } else {
