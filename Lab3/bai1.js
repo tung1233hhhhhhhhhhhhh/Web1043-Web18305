@@ -1,24 +1,44 @@
 function nhapDiem() {
-  let toan = parseFloat(prompt("Nhập điểm toán"));
-  if (toan < 0 || toan > 10) {
-    alert("nhap lai");
-    return nhapDiem();
-  }
-  let ly = parseFloat(prompt("Nhập điểm Lý"));
-  if (ly < 0 || ly > 10) {
-    alert("nhap lai");
-    return nhapDiem();
-  }
-  let hoa = parseFloat(prompt("Nhập điểm Hóa"));
-  if (hoa < 0 || hoa > 10) {
-    alert("nhap lai");
-    return nhapDiem();
-  }
-  let sinh = parseFloat(prompt("Nhập điểm sinh"));
-  if (sinh < 0 || sinh > 10) {
-    alert("nhap lai");
-    return nhapDiem();
-  }
+  // let toan = parseFloat(prompt("Nhập điểm toán"));
+  // if (toan < 0 || toan > 10) {
+  //   alert("nhap lai");
+  //   return nhapDiem();
+  // }
+  var nowrite = "";
+  do {
+    var toan = parseFloat(prompt("Nhập điểm toán"));
+  } while (toan < 0 || toan > 10);
+
+  // let ly = parseFloat(prompt("Nhập điểm Lý"));
+  // if (ly < 0 || ly > 10) {
+  //   alert("nhap lai");
+  //   return nhapDiem();
+  // }
+
+  do {
+    var ly = parseFloat(prompt("Nhập điểm Lý"));
+  } while (ly < 0 || ly > 10);
+
+  // let hoa = parseFloat(prompt("Nhập điểm Hóa"));
+  // if (hoa < 0 || hoa > 10) {
+  //   alert("nhap lai");
+  //   return nhapDiem();
+  // }
+
+  do {
+    var hoa = parseFloat(prompt("Nhập điểm Hóa"));
+  } while (hoa < 0 || hoa > 10);
+
+  // let sinh = parseFloat(prompt("Nhập điểm sinh"));
+  // if (sinh < 0 || sinh > 10) {
+  //   alert("nhap lai");
+  //   return nhapDiem();
+  // }
+
+  do {
+    var sinh = parseFloat(prompt("Nhập điểm Sinh"));
+  } while (sinh < 0 || sinh > 10);
+
   let diemTb = parseFloat((toan + ly + hoa + sinh) / 4);
   return diemTb;
 }
