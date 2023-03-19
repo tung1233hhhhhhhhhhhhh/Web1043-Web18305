@@ -4,10 +4,10 @@ function nhapDiem() {
   //   alert("nhap lai");
   //   return nhapDiem();
   // }
-  var nowrite = "";
+
   do {
     var toan = parseFloat(prompt("Nhập điểm toán"));
-  } while (toan < 0 || toan > 10);
+  } while (isNaN(toan) || toan < 0 || toan > 10);
 
   // let ly = parseFloat(prompt("Nhập điểm Lý"));
   // if (ly < 0 || ly > 10) {
@@ -17,7 +17,7 @@ function nhapDiem() {
 
   do {
     var ly = parseFloat(prompt("Nhập điểm Lý"));
-  } while (ly < 0 || ly > 10);
+  } while (isNaN(ly) || ly < 0 || ly > 10);
 
   // let hoa = parseFloat(prompt("Nhập điểm Hóa"));
   // if (hoa < 0 || hoa > 10) {
@@ -27,7 +27,7 @@ function nhapDiem() {
 
   do {
     var hoa = parseFloat(prompt("Nhập điểm Hóa"));
-  } while (hoa < 0 || hoa > 10);
+  } while (isNaN(hoa) || hoa < 0 || hoa > 10);
 
   // let sinh = parseFloat(prompt("Nhập điểm sinh"));
   // if (sinh < 0 || sinh > 10) {
@@ -37,7 +37,7 @@ function nhapDiem() {
 
   do {
     var sinh = parseFloat(prompt("Nhập điểm Sinh"));
-  } while (sinh < 0 || sinh > 10);
+  } while (isNaN(sinh) || sinh < 0 || sinh > 10);
 
   let diemTb = parseFloat((toan + ly + hoa + sinh) / 4);
   return diemTb;
