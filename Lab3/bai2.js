@@ -1,10 +1,11 @@
 const input = document.querySelector(".input");
 const myButtons = Array.from(document.querySelectorAll(".js-button"));
 var bien = null;
+var bien1;
 
 function clickButton() {
   if (this.innerHTML === "Delete") {
-    input.value = input.value.slice(0, -1); // Xóa đi 1 ký tự cuối cùngs
+    input.value = input.value.slice(0, -1); // Xóa đi 1 ký tự cuối cùng
   } else if (
     this.innerHTML === "+" ||
     this.innerHTML === "-" ||
@@ -14,8 +15,8 @@ function clickButton() {
     bien = this.innerHTML;
     num1 = parseInt(input.value);
     input.value = "";
-    // console.log(this.innerHTML);
   } else if (this.innerHTML === "=") {
+    bien1 = this.innerHTML;
     num2 = parseInt(input.value);
     var cong = "+";
     var tru = "-";
@@ -32,12 +33,19 @@ function clickButton() {
       result = result.toFixed(2);
     }
     input.value = result;
-    // bien = null;
+    bien = null; // Đặt lại biến 'bien' để chờ phép tính tiếp theo
   } else {
-    input.value += this.innerHTML; // Thêm giá trị của button vào input
+    if (bien1 === "=") {
+      input.value = "";
+      bien1 = "";
+    }
+    if (bien === null) {
+      input.value += this.innerHTML;
+    } else {
+      input.value += this.innerHTML; // Thêm giá trị của button vào input
+    }
   }
 }
-
 for (const myButton of myButtons) {
   myButton.addEventListener("click", clickButton);
 }
