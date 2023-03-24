@@ -6,8 +6,8 @@ function nhapDiem() {
   // }
 
   do {
-    var toan = parseFloat(prompt("Nhập điểm toán"));
-  } while (isNaN(toan) || toan < 0 || toan > 10);
+    var maths = parseFloat(prompt("Nhập điểm toán"));
+  } while (isNaN(maths) || maths < 0 || maths > 10);
 
   // let ly = parseFloat(prompt("Nhập điểm Lý"));
   // if (ly < 0 || ly > 10) {
@@ -16,8 +16,8 @@ function nhapDiem() {
   // }
 
   do {
-    var ly = parseFloat(prompt("Nhập điểm Lý"));
-  } while (isNaN(ly) || ly < 0 || ly > 10);
+    var physical = parseFloat(prompt("Nhập điểm Lý"));
+  } while (isNaN(physical) || physical < 0 || physical > 10);
 
   // let hoa = parseFloat(prompt("Nhập điểm Hóa"));
   // if (hoa < 0 || hoa > 10) {
@@ -26,8 +26,8 @@ function nhapDiem() {
   // }
 
   do {
-    var hoa = parseFloat(prompt("Nhập điểm Hóa"));
-  } while (isNaN(hoa) || hoa < 0 || hoa > 10);
+    var Chemistry = parseFloat(prompt("Nhập điểm Hóa"));
+  } while (isNaN(Chemistry) || Chemistry < 0 || Chemistry > 10);
 
   // let sinh = parseFloat(prompt("Nhập điểm sinh"));
   // if (sinh < 0 || sinh > 10) {
@@ -36,10 +36,10 @@ function nhapDiem() {
   // }
 
   do {
-    var sinh = parseFloat(prompt("Nhập điểm Sinh"));
-  } while (isNaN(sinh) || sinh < 0 || sinh > 10);
+    var biology = parseFloat(prompt("Nhập điểm biology"));
+  } while (isNaN(biology) || biology < 0 || biology > 10);
 
-  let diemTb = parseFloat((toan + ly + hoa + sinh) / 4);
+  let diemTb = parseFloat((maths + physics + Chemistry + biology) / 4);
   return diemTb;
 }
 
