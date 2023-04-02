@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.form {
+    width: 600px;
+    height: 500px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+label {
+    display: block;
+}
+
+h3 {
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    border-radius: 7px;
+    height: 30px;
+}
+
+.form .mota {
+    height: 50px;
+}
+
+.form>button {
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 11px 31px;
+    float: right;
+    background-color: white;
+    border-radius: 5px;
+    transition: .3s ease;
+}
+
+.clear {
+    clear: both;
+}
+
+.box {
+    margin-top: 30px;
+}
+
+.hang {
+    border-top: 1px solid black;
+    height: 50px;
+    line-height: 50px;
+}
+
+.js-edit,
+.js-delete {
+    padding: 10px 25px;
+    margin-right: 10px;
+}
+
+span {
+    display: inline-block;
+}
+
+.id {
+    width: 40px;
+}
+
+.name {
+    width: 120px;
+}
+
+.motatask {
+    width: 200px;
+}
+
+
+
+
+
+.js-add:hover,
+.js-delete:hover,
+.js-edit:hover {
+    background-color: #ccc;
+}
