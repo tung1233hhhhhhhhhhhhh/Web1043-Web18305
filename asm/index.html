@@ -7,33 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+
 </head>
 
 <body>
     <div class="main">
 
-        <!-- nav -->
-        <div class="nav">
-            <div class="logo"></div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Home</a></li>
-                </ul>
-            </div>
-            <!-- <div class="clear"></div> -->
-            <div class="nav-button">
-                <button class="login-button">Login</button>
-                <button class="sigup-button">Sig up</button>
-            </div>
-        </div>
+        <!-- header -->
 
-        <!-- banner -->
-        <div class="banner">
+        <div id="header">
             <div class="bg">
+                <!-- nav -->
+                <div class="nav">
+                    <div class="logo">
+                        <a href="#">
+                            <div class="logo-1"></div>
+                        </a>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li class="js-nav"><a href="#contact">Home</a></li>
+                            <li><a href="#news">Home</a></li>
+                            <li><a href="#slider">Home</a></li>
+                            <li><a href="#about">Home</a></li>
+                            <li><a href="#header">Home</a></li>
+                        </ul>
+                    </div>
+                    <!-- <div class="clear"></div> -->
+                    <div class="nav-button">
+                        <button class="login-button">Login</button>
+                        <button class="sigup-button">Sig up</button>
+                    </div>
+                </div>
+                <!-- /nav -->
                 <uk class="glass">
                     <li></li>
                     <li></li>
@@ -51,45 +59,157 @@
 
         <!-- About -->
 
-        <div class="about">
-            <h2>About</h2>
+        <div id="about">
+            <h2>Các trang phục nổi bật</h2>
+            <div class="container">
+                <div class="about-left"></div>
+                <div class="about-right">
+                    <div class="box box1"></div>
+                    <div class="box box2"></div>
+                    <!-- <div class="box"></div> -->
+                </div>
+            </div>
         </div>
 
         <!-- slider -->
-        <div class="slider">
 
+        <div id="slider">
+            <i class="ti-arrow-circle-left slider-prev"></i>
+            <i class="ti-arrow-circle-right slider-next"></i>
+            <div class="slider-wrapper">
+                <div class="slider-main">
+                    <div class="slider-item">
+                        <img src="./assets/img/lol-skin-fnc-2011-1536x842.jpg" alt="">
+                    </div>
+                    <div class="slider-item">
+                        <img src="./assets/img/lol-skin-skt-t1-2016-1536x864.jpg" alt="">
+                    </div>
+                    <div class="slider-item">
+                        <img src="./assets/img/lol-skin-ssw-ssg-2017-1536x854.jpg" alt="">
+                    </div>
+                    <div class="slider-item">
+                        <img src="./assets/img/lol-skin-fpx-2019-1536x864.jpg" alt="">
+                    </div>
+                    <div class="slider-item">
+                        <img src="./assets/img/lol-skin-dug-2020-1536x864.jpg" alt="">
+                    </div>
+                    <div class="slider-item">
+                        <img src="./assets/img/lmht-edg-skin.png" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
 
 
         <!-- News -->
 
-        <div class="news">
+        <div id="news">
             <h2>News</h2>
             <div class="box-news">
                 <div class="box-column">
-                    <div class="box"></div>
-                    <div class="box"></div>
+                    <div class="box box1"></div>
+                    <div class="box box2"></div>
                 </div>
                 <div class="box-column">
-                    <div class="box"></div>
-                    <div class="box"></div>
+                    <div class="box box3"></div>
+                    <div class="box box4"></div>
                 </div>
             </div>
         </div>
 
         <!-- contact -->
 
-        <div class="contact">
-            <h2>Contact</h2>
-            <div class="box">
-
+        <div id="contact">
+            <div class="map"></div>
+            <div class="contact-content">
+                <div class="contact-text1">HÃY BẮT ĐẦU</div>
+                <div class="contact-text2">HUYỀN THOẠI CỦA BẠN</div>
             </div>
+            <button class="contact-button">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Chơi ngay
+            </button>
+
         </div>
 
         <!-- footer -->
 
         <footer></footer>
-    </div>
+
+        <!-- modal login -->
+
+        <div class="modal-login modal-both">
+            <div class="modal_login-container ">
+                <div class="modal_login-close">
+                    <i class="ti-close"></i>
+                </div>
+                <div class="login-main">
+                    <header>
+                        <div class="text-login">Đăng nhập</div>
+                    </header>
+                    <div class="modal_login-body">
+                        <div class="login-form">
+                            <input type="text" class="login-input-1" placeholder=" ">
+                            <label for="name" class="login-label-1">Your Email:</label>
+                            <input type="password" class="login-input-2" placeholder=" ">
+                            <label for="password" class="login-label-2">Password:</label>
+                        </div>
+
+                        <div class="save-login">
+                            <input class="login-checkbox" type="checkbox">
+                            <span>Lưu đăng nhập</span>
+                        </div>
+
+                        <button class="btn-login">
+                            <i class="ti-arrow-right"></i>
+                        </button>
+                        <p class="creatacc">TẠO TÀI KHOẢN</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--modal sig up  -->
+        <div class="modal-sigup modal-both">
+            <div class="modal_sigup-container ">
+                <div class="modal_sigup-close">
+                    <i class="ti-close"></i>
+                </div>
+                <div class="sigup-main">
+                    <header>
+                        <div class="text-sigup">Đăng Ký</div>
+                    </header>
+                    <div class="modal_sigup-body">
+                        <div class="sigup-form">
+                            <input type="text" class="sigup-input-1" placeholder=" ">
+                            <label for="name" class="sigup-label-1">User Name:</label>
+                            <input type="email" class="sigup-input-2" placeholder=" ">
+                            <label for="email" class="sigup-label-2">Email:</label>
+                            <input type="password" class="sigup-input-3" placeholder=" ">
+                            <label for="password" class="sigup-label-3">Password:</label>
+                            <input type="password" class="sigup-input-4" placeholder=" ">
+                            <label for="password" class="sigup-label-4">Confirm Password:</label>
+                        </div>
+
+                        <div class="save-sigup">
+                            <input class="sigup-checkbox" type="checkbox">
+                            <span>Lưu Tài Khoản</span>
+                        </div>
+
+                        <button class="btn-sigup">
+                            <i class="ti-arrow-right"></i>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./js/ap.js"></script>
+        <script src="./js/header.js"></script>
+
 </body>
 
 </html>

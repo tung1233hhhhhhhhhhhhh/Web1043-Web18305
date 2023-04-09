@@ -1,0 +1,669 @@
+#header {
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+
+#header .bg {
+    width: 100%;
+    height: 100vh;
+    background: url('../img/banner1.jpg') top center / cover no-repeat;
+    position: relative;
+
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+    transition: 0.6s ease-in-out;
+}
+
+.nav.sticky {
+    background-color: #111827;
+    box-shadow: 0 0 5px #6d88e9;
+}
+
+.nav .logo {
+    height: 100px;
+    width: 88px;
+    display: inline-block;
+}
+
+.nav .logo .logo-1 {
+    transform: translateY(18px);
+    margin-left: 20px;
+    height: 67px;
+    width: 67px;
+    background: url('../img/logo.png') center no-repeat;
+    background-size: cover;
+}
+
+.nav .menu {
+    width: 900px;
+    height: 100%;
+    display: inline-block;
+}
+
+.nav .menu ul li {
+    list-style: none;
+    float: right;
+    line-height: 100px;
+    font-size: 20px;
+    margin-right: 40px;
+    user-select: none;
+}
+
+.nav .menu ul li:nth-child(1) {
+    margin-right: 10px;
+}
+
+.nav .menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    position: relative;
+}
+
+.nav .menu a:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    height: 3px;
+    background-color: #97f0c5;
+    transition: width 0.5s linear;
+}
+
+.nav .menu a:hover:before {
+    width: 100%;
+}
+
+.nav .menu a:hover {
+    color: #8beef6;
+
+}
+
+.nav .nav-button {
+    width: 400px;
+    height: 100%;
+    float: right;
+    margin-top: 5px;
+    position: relative;
+}
+
+.nav button {
+    padding: 15px 50px;
+    top: 0;
+    transform: translateY(45%);
+    margin-right: 30px;
+    border-radius: 30px;
+    transition: .5s ease;
+    z-index: 999;
+}
+
+.nav .nav-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 34%;
+    height: 48%;
+    border-radius: 30px;
+    background-color: #5abbb7;
+    transform: translateY(22px);
+}
+
+.nav .nav-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 90px;
+    width: 34%;
+    height: 48%;
+    border-radius: 30px;
+    background-color: #5abbb7;
+    transform: translateY(23px);
+    z-index: -1;
+}
+
+.nav button:hover {
+    cursor: pointer;
+    transform: translateY(10px);
+}
+
+#header .glass {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#header .glass li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.34);
+    /* background: rgba(255, 255, 255, 0.1); */
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    animation: spin 5s linear infinite;
+    bottom: -150px;
+}
+
+#header .glass li:nth-child(1) {
+    left: 20%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+}
+
+#header .glass li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 18s;
+}
+
+#header .glass li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+#header .glass li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+#header .glass li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+#header .glass li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+#header .glass li:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+#header .glass li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+#header .glass li:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+#header .glass li:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+.modal-login {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    display: none;
+}
+
+.modal_login-container {
+    width: 506px;
+    height: 528px;
+    background-color: white;
+    margin: 0 auto;
+    transform: translateY(22%);
+    position: relative;
+    box-shadow: 0 0 10px #ccc;
+    border-radius: 10px;
+    animation: login ease .7s;
+}
+
+.modal_login-container .modal_login-close {
+    position: absolute;
+    right: 0;
+    padding: 15px;
+}
+
+.modal_login-container .modal_login-close:hover {
+    cursor: pointer;
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+.ti-close {
+    font-size: 19px;
+}
+
+
+.login-main {
+    padding: 80px 50px 0px 50px;
+    height: 100%;
+}
+
+.text-login {
+    text-align: center;
+    margin-bottom: 54px;
+    font-family: 'Neue Frutiger World vi', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.login-input-1,
+.login-input-2 {
+    padding: 0 20px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    width: 100%;
+    height: 50px;
+    transition: .25s ease;
+
+}
+
+.login-input-2:focus,
+.login-input-1:focus {
+    outline: none;
+    border-color: #6a5af9;
+}
+
+.login-form {
+    position: relative;
+}
+
+.login-label-1 {
+    position: absolute;
+    top: 16%;
+    transform: translateY(-50%);
+    left: 21px;
+    user-select: none;
+    color: #999;
+    pointer-events: none;
+    transition: .5s ease;
+}
+
+.login-label-2 {
+    position: absolute;
+    left: 21px;
+    color: #999;
+    pointer-events: none;
+    transition: .5s ease;
+    transform: translateY(-50%);
+    top: 67%;
+}
+
+
+.login-input-1:not(:placeholder-shown)+.login-label-1,
+.login-input-1:focus+.login-label-1 {
+    top: 0;
+    left: 11px;
+    padding: 0 10px;
+    display: inline-block;
+    background-color: white;
+    color: #6a5af9;
+    transition: .5s ease;
+    border: 1px solid #6a5af9;
+    border-radius: 5px;
+
+}
+
+.login-input-2:not(:placeholder-shown)+.login-label-2,
+.login-input-2:focus+.login-label-2 {
+    left: 11px;
+    padding: 0 10px;
+    display: inline-block;
+    background-color: white;
+    color: #6a5af9;
+    transition: .5s ease;
+    top: 70px;
+    border: 1px solid #6a5af9;
+    border-radius: 5px;
+}
+
+.modal-login .save-login {
+    width: 100%;
+    height: 60px;
+}
+
+.modal-login .login-checkbox {
+    width: 20px;
+    height: 20px;
+}
+
+.modal-login span {
+    font-size: 17px;
+    margin-left: 11px;
+    position: absolute;
+
+}
+
+.modal-login .btn-login {
+    padding: 20px 50px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 40px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.modal-login .btn-login:hover {
+    box-shadow: 0 0 10px #ccc;
+    background-color: #f9f9f9;
+}
+
+.ti-arrow-right {
+    font-size: 30px;
+    color: #918daf;
+}
+
+.modal_login-body p {
+    display: block;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 15px;
+    letter-spacing: 1.2px;
+    font-weight: 530;
+    display: block;
+    text-align: center;
+    margin-top: 34px;
+    transition: .25s linear;
+}
+
+.modal_login-body p:hover {
+    cursor: pointer;
+    color: #302c2c;
+}
+
+.modal-login.open {
+    display: block;
+}
+
+
+/*  */
+
+.modal-sigup.open {
+    display: block;
+}
+
+.modal-sigup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    display: none;
+}
+
+.modal_sigup-container {
+    width: 506px;
+    height: 528px;
+    background-color: white;
+    margin: 0 auto;
+    transform: translateY(22%);
+    position: relative;
+    box-shadow: 0 0 10px #ccc;
+    border-radius: 10px;
+    animation: login ease .7s;
+}
+
+.modal_sigup-container .modal_sigup-close {
+    position: absolute;
+    right: 0;
+    padding: 15px;
+}
+
+.modal_sigup-container .modal_sigup-close:hover {
+    cursor: pointer;
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+.sigup-main {
+    padding: 50px 50px 0px 50px;
+    height: 100%;
+}
+
+.text-sigup {
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: 'Neue Frutiger World vi', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.sigup-input-4,
+.sigup-input-3,
+.sigup-input-1,
+.sigup-input-2 {
+    padding: 0 20px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    width: 100%;
+    height: 50px;
+    transition: .25s ease;
+
+}
+
+.sigup-input-4:focus,
+.sigup-input-3:focus,
+.sigup-input-2:focus,
+.sigup-input-1:focus {
+    outline: none;
+    border-color: #6a5af9;
+}
+
+.sigup-form {
+    position: relative;
+}
+
+.sigup-label-1 {
+    position: absolute;
+    top: 9%;
+    transform: translateY(-50%);
+    left: 21px;
+    user-select: none;
+    color: #999;
+    pointer-events: none;
+    transition: .5s ease;
+}
+
+.sigup-label-2 {
+    user-select: none;
+    position: absolute;
+    left: 21px;
+    color: #999;
+    pointer-events: none;
+    transition: .5s ease;
+    transform: translateY(-50%);
+    top: 34%;
+}
+
+.sigup-label-3 {
+    user-select: none;
+    position: absolute;
+    left: 21px;
+    color: #999;
+    pointer-events: none;
+    transition: .5s ease;
+    transform: translateY(-50%);
+    top: 59%;
+}
+
+.sigup-label-4 {
+    user-select: none;
+    position: absolute;
+    left: 21px;
+    color: #999;
+    pointer-events: none;
+    transition: .5s ease;
+    transform: translateY(-50%);
+    top: 84%;
+}
+
+
+.sigup-input-1:not(:placeholder-shown)+.sigup-label-1,
+.sigup-input-1:focus+.sigup-label-1 {
+    top: 0;
+    left: 11px;
+    padding: 0 10px;
+    display: inline-block;
+    background-color: white;
+    color: #6a5af9;
+    transition: .5s ease;
+    border: 1px solid #6a5af9;
+    border-radius: 5px;
+
+}
+
+.sigup-input-2:not(:placeholder-shown)+.sigup-label-2,
+.sigup-input-2:focus+.sigup-label-2 {
+    left: 11px;
+    padding: 0 10px;
+    display: inline-block;
+    background-color: white;
+    color: #6a5af9;
+    transition: .5s ease;
+    top: 70px;
+    border: 1px solid #6a5af9;
+    border-radius: 5px;
+}
+
+.sigup-input-3:not(:placeholder-shown)+.sigup-label-3,
+.sigup-input-3:focus+.sigup-label-3 {
+    top: 140px;
+    left: 11px;
+    padding: 0 10px;
+    display: inline-block;
+    background-color: white;
+    color: #6a5af9;
+    transition: .5s ease;
+    border: 1px solid #6a5af9;
+    border-radius: 5px;
+
+}
+
+.sigup-input-4:not(:placeholder-shown)+.sigup-label-4,
+.sigup-input-4:focus+.sigup-label-4 {
+    left: 11px;
+    padding: 0 10px;
+    display: inline-block;
+    background-color: white;
+    color: #6a5af9;
+    transition: .5s ease;
+    top: 210px;
+    border: 1px solid #6a5af9;
+    border-radius: 5px;
+}
+
+.modal-sigup .save-sigup {
+    width: 100%;
+    height: 60px;
+}
+
+.modal-sigup .sigup-checkbox {
+    width: 20px;
+    height: 20px;
+}
+
+.modal-sigup span {
+    font-size: 17px;
+    margin-left: 11px;
+    position: absolute;
+
+}
+
+.modal-sigup .btn-sigup {
+    padding: 20px 50px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 40px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: .5s ease;
+    transform: translateY(-16px);
+}
+
+.modal-sigup .btn-sigup:hover {
+    box-shadow: 0 0 10px #ccc;
+    background-color: #f9f9f9;
+}
+
+
+
+
+
+
+@keyframes spin {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+@keyframes login {
+    from {
+        transform: translateY(10px);
+    }
+
+    to {
+        transform: translateY(22%);
+    }
+}
+
+
+#about {
+    transition: .5s ease;
+}

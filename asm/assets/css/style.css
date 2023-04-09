@@ -8,108 +8,163 @@
     clear: both;
 }
 
-.main {}
 
-.nav {
-    width: 100%;
-    height: 88px;
-    background-color: #171515;
+
+.main {
+    user-select: none;
+    background-color: #111827;
 }
-
-.nav .logo {
-    height: 100%;
-    width: 143px;
-    background-color: aqua;
-    display: inline-block;
-}
-
-.nav .menu {
-    width: 900px;
-    height: 100%;
-    display: inline-block;
-}
-
-.menu ul li {
-    list-style: none;
-    float: right;
-    line-height: 88px;
-    font-size: 20px;
-    margin-right: 50px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: white;
-}
-
-.nav .nav-button {
-    width: 400px;
-    height: 100%;
-    float: right;
-
-}
-
-.nav button {
-    padding: 15px 50px;
-    top: 0;
-    transform: translateY(45%);
-    margin-right: 30px;
-    border-radius: 10px;
-}
-
-/* banner  */
-.banner {
-    width: 100%;
-    height: 700px;
-    /* background-color: #800080; */
-}
-
-
 
 
 /* about */
-.about {
+#about {
     width: 100%;
-    height: 600px;
+    height: 800px;
     background-color: #1D1B1B;
 }
 
-.about h2 {
-    display: inline-block;
+#about h2 {
     color: white;
-    font-size: 40px;
-    padding-top: 40px;
-    padding-left: 68px;
-    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 51px;
+    transform: translateY(98px);
+    margin-left: 85px;
 }
 
-.about h2:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 60%;
-    height: 3px;
-    background-color: aqua;
+
+#about .container {
+    width: 89%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    /* background-color: azure; */
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transform: translateY(19%);
+    justify-content: space-between;
 }
+
+#about .container .about-left {
+    width: 801px;
+    height: 480px;
+    background-color: #8CF2E0;
+    background: url("../img/sss.webp");
+    background-size: cover;
+    border-radius: 20px;
+}
+
+/* #about .container .about-left:hover {
+    cursor: pointer;
+    border: 1px solid #ccc;
+    transition: .25s ease;
+
+} */
+
+#about .container .about-right {
+    width: 534px;
+    height: 480px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#about .about-right .box {
+    width: 534px;
+    height: 235px;
+    border-radius: 20px;
+}
+
+/* #about .about-right .box:hover {
+    cursor: pointer;
+    border: 1px solid #ccc;
+    transition: .25s ease;
+} */
+
+#about .about-right .box1 {
+    background: url("../img/lucian.jpg");
+    background-size: cover;
+}
+
+#about .about-right .box2 {
+    background: url("../img/nasus.webp");
+    background-size: cover;
+}
+
+
 
 /* slider */
 
-.slider {
+#slider {
+    max-width: 1000px;
+    margin: 25px auto;
+    position: relative;
+}
+
+.slider-next,
+.slider-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 100rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.slider-next {
+    right: -150px;
+}
+
+.slider-prev {
+    left: -150px;
+}
+
+.slider-wrapper {
     width: 100%;
-    height: 424px;
-    background-color: #B7B2B2;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-main {
+    display: flex;
+    position: relative;
+    transition: transform 0.25s linear;
+    height: 100%;
+}
+
+.slider-item {
+    height: 100%;
+    width: 100%;
+    flex: 1 0 100%;
+    user-select: none;
+}
+
+.slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 /* News */
 
-.news {
+#news {
     width: 100%;
     height: 763px;
     background-color: #242121;
 }
 
-.news h2 {
+#news h2 {
     display: inline-block;
     color: white;
     font-size: 40px;
@@ -118,7 +173,7 @@
     position: relative;
 }
 
-.news h2:before {
+#news h2:before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -128,13 +183,13 @@
     background-color: aqua;
 }
 
-.news .box-news {
+#news .box-news {
     display: flex;
     flex-direction: column;
 
 }
 
-.news .box-column {
+#news .box-column {
     display: flex;
     width: 1202px;
     height: 236px;
@@ -143,48 +198,141 @@
     justify-content: space-between;
 }
 
-.news .box-column .box {
+#news .box-column .box {
 
     width: 591px;
-    height: 236px;
+    height: 260px;
     background-color: #969393;
-    border-radius: 30px;
+    border-radius: 20px;
+}
+
+#news .box1 {
+    background: url("../img/new1.png") center no-repeat;
+    background-size: cover;
+}
+
+#news .box2 {
+    background: url("../img/new2.png") center no-repeat;
+    background-size: cover;
+}
+
+#news .box3 {
+    background: url("../img/new3.png") center no-repeat;
+    background-size: cover;
+}
+
+#news .box4 {
+    background: url("../img/new4.png")center no-repeat;
+    background-size: cover;
 }
 
 /* contact */
 
-.contact {
+#contact {
     width: 100%;
-    height: 612px;
-    background-color: #25324E;
-}
-
-.contact h2 {
-    display: inline-block;
-    color: white;
-    font-size: 40px;
-    padding-top: 40px;
-    padding-left: 68px;
+    height: 900px;
+    background-color: rgb(3, 6, 8);
     position: relative;
 }
 
-.contact h2:before {
-    content: "";
+#contact .map {
+    width: 1012px;
+    height: 679px;
     position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 65%;
-    height: 3px;
-    background-color: aqua;
+    background: url("../img/player-guide-map-1440-32575baa2f8d2b2bfd5cfd07e11d1361.png") center no-repeat;
+    background-size: cover;
+    top: 150px;
+    transform: translateX(42%);
+    animation: mapScroll ease 2s;
 }
 
-.contact .box {
-    width: 1139px;
-    height: 355px;
-    background-color: #19202D;
-    border-radius: 20px;
-    margin: 0 auto;
-    transform: translateY(28%);
+#contact .contact-button {
+    padding: 20px 40px;
+    /* border-radius: 15px; */
+    background-color: rgb(11, 198, 227);
+    font-size: 18px;
+    margin-left: 80px;
+    margin-top: 373px;
+    position: relative;
+    border: none;
+    outline: none;
+    color: black;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#contact .contact-content {
+    width: 654px;
+    height: 100px;
+    color: wheat;
+    font-style: italic;
+    text-align: center;
+    line-height: 2.6;
+    transform: translateY(281px);
+    animation: textScroll ease 2s;
+    display: block;
+    position: relative;
+}
+
+#contact .contact-content .contact-text1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+#contact .contact-content .contact-text2 {
+    font-size: 49px;
+    line-height: 0.85;
+    font-family: "Beaufort for LOL", serif;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+}
+
+.contact-button span {
+    position: absolute;
+    background-color: #8CF2E0;
+    display: block;
+    transition: all 0.25s linear;
+}
+
+.contact-button span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+}
+
+.contact-button span:nth-child(2) {
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 0;
+    transition-delay: 0.25s;
+}
+
+.contact-button span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 3px;
+    transition-delay: 0.5s;
+}
+
+.contact-button span:nth-child(4) {
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    height: 0;
+    transition-delay: 0.75s;
+}
+
+.contact-button:hover span:nth-child(odd) {
+    width: 100%;
+
+}
+
+.contact-button:hover span:nth-child(even) {
+    height: 100%;
 }
 
 /* footer */
@@ -194,4 +342,25 @@ footer {
     width: 100%;
     height: 77px;
     background-color: #111827;
+}
+
+@keyframes mapScroll {
+    from {
+        transform: translateX(50%);
+
+    }
+
+    to {
+        transform: translateX(42%);
+    }
+}
+
+@keyframes textScroll {
+    form {
+        transform: translateY(40px);
+    }
+
+    to {
+        transform: translateY(281px);
+    }
 }
