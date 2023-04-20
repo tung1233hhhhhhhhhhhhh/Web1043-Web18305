@@ -388,10 +388,7 @@
     transition: .5s ease;
 }
 
-.modal-login .btn-login:hover {
-    box-shadow: 0 0 10px #ccc;
-    background-color: #f9f9f9;
-}
+
 
 .ti-arrow-right {
     font-size: 30px;
@@ -628,14 +625,6 @@
     transition: .5s ease;
     transform: translateY(-16px);
 }
-
-.modal-sigup .btn-sigup:hover {
-    box-shadow: 0 0 10px #ccc;
-    background-color: #f9f9f9;
-}
-
-
-
 
 
 
